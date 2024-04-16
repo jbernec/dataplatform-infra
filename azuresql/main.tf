@@ -74,6 +74,7 @@ resource "azurerm_mssql_server" "server" {
   administrator_login          = var.admin_username
   administrator_login_password = data.azurerm_key_vault_secret.secret.value
   version                      = "12.0"
+  public_network_access_enabled = false
 }
 
 # Create SQL database
