@@ -1,0 +1,25 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+      {
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2021-04-01",
+        "name": "[variables('storageAccountName')]",
+        "location": "[resourceGroup().location]",
+        "sku": {
+          "name": "Standard_LRS",
+          "tier": "Standard"
+        },
+        "kind": "StorageV2",
+        "properties": {
+          "supportsHttpsTrafficOnly": true,
+          "isHnsEnabled": true
+        }
+      }
+    ],
+    "variables": {
+      "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'storage')]"
+    }
+  }
+  
