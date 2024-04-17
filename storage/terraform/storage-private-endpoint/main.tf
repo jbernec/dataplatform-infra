@@ -104,7 +104,7 @@ resource "azurerm_private_dns_zone" "private_dns" {
 
 # Create a virtual network link to the private DNS zone
 resource "azurerm_private_dns_zone_virtual_network_link" "link" {
-  name                  = "dns-vnet-link"
+  name                  = "storage-dns-vnet-link"
   resource_group_name   = data.azurerm_resource_group.rgvnet.name
   private_dns_zone_name = azurerm_private_dns_zone.private_dns.name
   virtual_network_id    = data.azurerm_virtual_network.vnet.id
