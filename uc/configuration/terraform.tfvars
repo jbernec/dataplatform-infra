@@ -1,0 +1,1 @@
+databricks_workspace_resource_id = "/subscriptions/29321427-bee7-4513-995c-0e3b141b2c0e/resourceGroups/rgadb/providers/Microsoft.Databricks/workspaces/adbworkspace"
